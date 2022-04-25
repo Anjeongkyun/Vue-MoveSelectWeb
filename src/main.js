@@ -1,7 +1,7 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
+import router from './routes/index.js'
 
-new Vue({
-  el: '#app',
-  render: h => h(App)
-})
+createApp(App)
+    .use(router) // use : 플러그인 연결
+    .mount('#app')
